@@ -30,7 +30,6 @@ nav a{
     text-transform: uppercase;
     font-size: 1.6rem;
     position: relative;
-
 }
 
 nav a.active:before{
