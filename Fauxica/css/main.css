@@ -1,30 +1,36 @@
-html{
+html {
     font-size: 62.5%;
 }
-body{
+
+body {
     margin: 0;
     font-family: 'Poppins';
 }
-.wrapper{
+
+.wrapper {
     max-width: 1200px;
-    margin: 0 auto    ;
+    margin: 0 auto;
 }
-header{
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-nav{
+
+nav {
     margin: 4em;
 }
-nav ul{
+
+nav ul {
     list-style-type: none;
     display: flex;
     gap: 3.6em;
     margin: 0;
-   
+
 }
-nav a{
+
+nav a {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
@@ -32,12 +38,201 @@ nav a{
     position: relative;
 }
 
-nav a.active:before{
+nav a.active:before {
     position: absolute;
     content: "";
     border-bottom: 2px solid black;
     height: 1px;
     width: 35%;
     bottom: -3px;
+
+}
+nav a:before{
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid rgb(49, 49, 49);
+    height: 1px;
+    width: 0%;
+    bottom: -3px;
+    transition: width .3s;
+}
+main {
+    display: flex;
+    gap: 132px;
+    margin-top: 138px;
+
+}
+
+.left-col {
+    width: 45%;
+}
+.right-col{
+    flex-grow: 1;
+    margin: 0;
+}
+
+div.left-col h1 {
+    font-family: 'Playfair Display';
+    font-size: 5.2rem;
+    font-weight: lighter;
+}
+
+div p {
+    font-family: 'Poppins';
+    font-size: 1.8rem;
+}
+div.cta-btns{
+    display: flex;
+    gap: 63px;
+    margin: 1px;
+    margin-top: 67px;
+    font-family: Poppins;
+    
+}
+a.primary-cta {
+
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #F2F0DF;
+    border-radius: 19px;
+    padding: 1em 2em;
+    color: black;
+
+}
+
+div.cta-btns, .secondary-cta{
+    font-size: 18px;
+    color: black;
+    display: block;
+    display: flex;
+    gap: 10px;
+    padding: 1em 0;
+}
+.secondary-cta svg{
+    width: 18px;
+    transition: transform .3s;
+}
+
+div.news{
+    display: flex;
+    gap: 5em;
+    border: 1px solid black;
+    border-radius: 1.9rem;
+    padding: 5em;
+    font-family: 'Poppins';
+    position: relative;
+}
+.news:before{
+    position: absolute;
+    content: "";
+    background: url(/images/confetti.svg);
+    
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    left: -20px;
+    z-index: -5;
+}
+p.employee{
+    font-size: 3.3rem;
+    margin: 0;
+    font-weight: 100;
+    line-height: 100%;
+
+}
+p.detail{
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin: 0;
+
+}
+
+.right-col{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap:3em;
+    grid-template-areas:
+    "left right"
+    "left bottom";
+    line-height: 100%;
+
+}
+.card{
+    background-color: gray;
+    display: flex;
+    border-radius: 10px;
+    align-items: end;
+    padding: 1.1em;
+    background-size: 170%;
+    transition: background-size .8s;
+}
+
+.card1{
+    grid-area: left;
+    background-image: url(/images/clothing1.jpg);
+    position: relative;
    
+}
+.card1::before{
+    position: absolute;
+    content: "";
+    background: url(/images/tag.svg) no-repeat;
+    width: 100%;
+    height: 100%;
+    top: -10px;
+    left: -90px;
+    pointer-events: none;
+}
+.card2{
+
+    background-image: url(/images/clothing2.jpg);
+   
+}
+.card3{
+    
+    background-image: url(/images/clothing3.jpg);
+   
+}
+div.product-detail{
+    display: flex;
+    background: white;
+    border-radius: .6em;
+    font-family: 'Poppins';
+    padding: 7px 17px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 24px;
+    transform: translate .8s;
+}
+a.product-title{ 
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+    
+.product-title p{
+    font-size: 14px;
+    color: black;
+    font-weight: lighter;
+    margin: 0;
+}
+
+
+nav a:hover:before{
+    width: 35%;
+}
+a.primary-cta:hover{
+    background-color: rgb(237, 203, 161);
+}
+a.secondary-cta:hover svg{
+    transform: translateX(10px);
+}
+.card:hover{
+    background-size: 160%;
+}
+.product-detail:hover{
+    transform: translateY(-20px);
+ 
 }
